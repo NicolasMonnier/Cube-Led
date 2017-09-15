@@ -1,13 +1,15 @@
 #include <iostream>
 #include "cube.hpp"
-
+#include "draw.hpp"
 
 int main(void)
 {
-  Cube instance(5,5,5);
-  instance.print_My_Cube();
+	init_IO();
 
-  std::cout<<"Hello !"<<std::endl;
-  std::cout<<"c'est moi!"<<std::endl;
-  return 0;
+	Cube instance(9,9,9);
+
+
+	std::cout<<"Hello !"<<std::endl;
+	std::cout<<"c'est moi!"<<std::endl;
+	return 0;
 }
