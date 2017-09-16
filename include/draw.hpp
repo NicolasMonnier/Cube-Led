@@ -9,7 +9,11 @@
 #define INCLUDE_DRAW_HPP_
 
 #include <iostream>
+
+extern "C" {
 #include <wiringPi.h>
+}
+
 
 void init_IO();
 
