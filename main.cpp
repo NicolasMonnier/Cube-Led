@@ -1,12 +1,13 @@
 #include <iostream>
-#include "cube.hpp"
+#include "staticcube.hpp"
+#include "dynamiccube.hpp"
 #include "draw.hpp"
 
 int main(void)
 {
 	init_IO();
 
-	Cube instance(9,9,9);
+	StaticCube instance();
 
 
 	std::cout<<"Hello !"<<std::endl;

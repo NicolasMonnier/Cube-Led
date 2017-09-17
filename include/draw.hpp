@@ -10,10 +10,11 @@
 
 #include <iostream>
 
+/*
 extern "C" {
 #include <wiringPi.h>
 }
-
+*/
 
 void init_IO();
 

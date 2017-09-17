@@ -19,10 +19,16 @@ include_directories(
   ${WIRINGPI_INCLUDE_DIRS}
 )
 
-# Cube library
+# StaticCube library
 add_library(
-  cube
-  cube.cpp
+  staticcube
+  staticcube.cpp
+)
+
+#DynamicCube Library
+add_Library(
+  dynamiccube
+  dynamiccube.cpp
 )
 
 # Draw library
@@ -33,7 +39,8 @@ add_library(
 target_link_libraries(
   draw
   ${WIRINGPI_LIBRARIES}
-  ${CMAKE_THREAD_LIBS_INIT}
+  # ${CMAKE_THREAD_LIBS_INIT}
+  ${CMAKE_THREAD_LIBS_INIT} -lrt
 )
 
 # Main program
@@ -43,7 +50,10 @@ add_executable(
 )
 target_link_libraries(
   hello
-  cube
+  staticcube
+  dynamiccube
   draw
+  pthread
+  rt
 )
 
